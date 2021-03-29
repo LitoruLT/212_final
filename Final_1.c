@@ -22,9 +22,11 @@ void main()
         if(k%mul==c)
         {
             break;
+            printf("k=%lli\n",k);
         }
         else
         {
+            printf("At Con k=%lli\n",k);
             continue;
         }
 
