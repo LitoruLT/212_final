@@ -10,10 +10,13 @@ void main()
         scanf("%lli",&get[i]);
     n=get[0];
     c=get[1];
+    printf("n = %lli\n",n);
+    printf("c = %lli\n",c);
 
     while(mul<c)
     {
-        mul*10;
+        mul=mul*10;
+        printf("mul = %lli\n",mul);
     }
     k=n;
     while(n>k)
