@@ -62,15 +62,16 @@ void main()
                 check=0;
                 break;
             }
-            if( i+1 > countn )
+            else if( i+1 > countn )
             {
+                checkc=0;
                 check=1;
                 break;
             }
         }
         i++;
         j=0;
-        if(i>countn)
+        if( (i+1>countn) && !checkc && check==0)
         {
             check=1;
             break;
@@ -79,7 +80,7 @@ void main()
     }
 /////////////////////////////////////Ver 2.0//////////////////////////////////
 
-
+printf("check=%lli\n",check);
 
 
 
