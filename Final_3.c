@@ -31,7 +31,8 @@ void main()
                 }
             }
         }
-        printf("\n");
+        if(k<2)
+            printf("\n");
     }
 /*                 For Check  Num
     printf("check Num\n");
@@ -59,7 +60,6 @@ void main()
     }
 */
     /////////////////////////////////////////////////////////////////////////////
-
 
     int sums1[(n[0]*2)+2];
     int sums2[(n[1]*2)+2];
@@ -107,15 +107,15 @@ void main()
             {
                 if(k==0)
                 {
-                    sums1[j+n[0]]=sums1[j+n[0]]+first[i][j];
+                    sums1[j+n[k]]=sums1[j+n[k]]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    sums2[j+n[1]]=sums2[j+n[1]]+sec[i][j];
+                    sums2[j+n[k]]=sums2[j+n[k]]+sec[i][j];
                 }
                 else
                 {
-                    sums3[j+n[2]]=sums3[j+n[2]]+third[i][j];
+                    sums3[j+n[k]]=sums3[j+n[k]]+third[i][j];
                 }
             }
         }
@@ -123,38 +123,38 @@ void main()
 
     for(k=0; k<3 ;k++)
     {
-        for(j=0,i=0; j<3 ;j++,i++)
+        for(j=0,i=0; j<n[k] ;j++,i++)
         {
                 if(k==0)
                 {
-                    sums1[(n[0]*2)]=sums1[(n[0]*2)]+first[i][j];
+                    sums1[(n[k]*2)]=sums1[(n[k]*2)]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    sums2[(n[1]*2)]=sums2[(n[1]*2)]+sec[i][j];
+                    sums2[(n[k]*2)]=sums2[(n[k]*2)]+sec[i][j];
                 }
                 else
                 {
-                    sums3[(n[2]*2)]=sums3[(n[2]*2)]+third[i][j];
+                    sums3[(n[k]*2)]=sums3[(n[k]*2)]+third[i][j];
                 }
         }
     }
 
     for(k=0; k<3 ;k++)
     {
-        for(j=0,i=0; j<3 ;j++,i++)
+        for(j=n[k],i=n[k]; j>=0 ;j++,i++)
         {
                 if(k==0)
                 {
-                    sums1[(n[0]*2)+1]=sums1[(n[0]*2)+1]+first[i][j];
+                    sums1[(n[k]*2)+1]=sums1[(n[k]*2)+1]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    sums2[(n[1]*2)+1]=sums2[(n[1]*2)+1]+sec[i][j];
+                    sums2[(n[k]*2)+1]=sums2[(n[k]*2)+1]+sec[i][j];
                 }
                 else
                 {
-                    sums3[(n[2]*2)+1]=sums3[(n[2]*2)+1]+third[i][j];
+                    sums3[(n[k]*2)+1]=sums3[(n[k]*2)+1]+third[i][j];
                 }
         }
     }
@@ -181,11 +181,15 @@ void main()
 
     }
 
-    int check=0;
+    int check=0,for2;
     for(k=0; k<3 ;k++)
     {
         check=0;
-        for(i=0 ; i<(n[k]*2)+2 ; i++)
+        if(n[k]==2)
+            for2=0
+        else
+            for2=2
+        for(i=0 ; i<(n[k]*2)+for2 ; i++)
         {
            if(k==0 && i>0)
             {
@@ -216,7 +220,6 @@ void main()
             printf("yes\n");
         else
             printf("no\n");
-        printf("\n");
 
     }
 
