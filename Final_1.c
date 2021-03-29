@@ -1,7 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<ctype.h>
-#include<string.h>
 
 void main()
 {
@@ -10,10 +7,8 @@ void main()
         scanf("%lli",&get[i]);
     n=get[0];
     c=get[1];
-    //printf("n = %lli\n",n);
-    //printf("c = %lli\n",c);
 
-    while(mul<c)
+    while(mul<=c)
     {
         mul=mul*10;
         //printf("mul = %lli\n",mul);
