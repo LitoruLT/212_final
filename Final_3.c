@@ -82,20 +82,61 @@ void main()
             {
                 if(k==0)
                 {
-                    sums1[j+3]=sums1[j+3]+first[i][j];
+                    sums1[j+n[0]]=sums1[j+n[0]]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    sums2[j+3]=sums2[j+3]+sec[i][j];
+                    sums2[j+n[1]]=sums2[j+n[1]]+sec[i][j];
                 }
                 else
                 {
-                    sums3[j+3]=sums3[j+3]+third[i][j];
+                    sums3[j+n[2]]=sums3[j+n[2]]+third[i][j];
                 }
             }
         }
     }
 
+    for(k=0; k<3 ;k++)
+    {
+        for(j=0,i=0; j<3 ;j++,i++)
+        {
+                if(k==0)
+                {
+                    sums1[j+(n[0]*2)]=sums1[j+(n[0]*2)]+first[i][j];
+                }
+                else if(k==1)
+                {
+                    sums2[j+(n[1]*2)]=sums2[j+(n[1]*2)]+sec[i][j];
+                }
+                else
+                {
+                    sums3[j+(n[2]*2)]=sums3[j+(n[2]*2)]+third[i][j];
+                }
+        }
+    }
+
+
+    printf("check SUM\n");
+    for(k=0; k<3 ;k++)
+    {
+        for(i=0 ; i<(n[k]*2)+2 ; i++)
+        {
+           if(k==0)
+            {
+                printf("%d ",sums1[i]);
+            }
+            else if(k==1)
+            {
+                printf("%d ",sums2[i]);
+            }
+            else
+            {
+                printf("%d ",sums3[i]);
+            }
+        }
+        printf("\n");
+
+    }
 
 
 }
