@@ -10,26 +10,26 @@ void main()
         scanf("%lli",&get[i]);
     n=get[0];
     c=get[1];
-    printf("n = %lli\n",n);
-    printf("c = %lli\n",c);
+    //printf("n = %lli\n",n);
+    //printf("c = %lli\n",c);
 
     while(mul<c)
     {
         mul=mul*10;
-        printf("mul = %lli\n",mul);
+        //printf("mul = %lli\n",mul);
     }
     k=n;
-    while(n>k)
+    while(1)
     {
         k++;
         if(k%mul==c)
         {
+            //printf("k=%lli\n",k);
             break;
-            printf("k=%lli\n",k);
         }
         else
         {
-            printf("At Con k=%lli\n",k);
+            //printf("At Con k=%lli\n",k);
             continue;
         }
 
