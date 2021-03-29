@@ -31,32 +31,28 @@ void main()
     i=0;
     while(ntemp)
     {
-        ////////////printf("nuse = %lli , ntemp = %lli \n",nuse,ntemp);
+        printf("nuse = %lli , ntemp = %lli \n",nuse,ntemp);
         seperateN[i]=nuse/ntemp;
-        nuse=nuse/10;
+        nuse=nuse%ntemp;
         ntemp=ntemp/10;
         i++;
     }
     i=0;
     while(ctemp)
     {
+        printf("cuse = %lli , ctemp = %lli \n",cuse,ctemp);
         seperateC[i]=cuse/ctemp;
-        cuse=cuse/10;
+        cuse=cuse%ctemp;
         ctemp=ctemp/10;
         i++;
     }
-    countc=countc-1;
-    countn=countn-1;
     long long int check=0;
-    //while(!check)
+    i=0,j=0;
+    while(!check)
     {
-
+        if()
     }
 
-    for(i=0; i<countc ;i++)
-    {
-        printf("%lli ",seperateC[i]);
-    }
 
 
 
