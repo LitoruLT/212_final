@@ -64,15 +64,15 @@ void main()
     int sums1[(n[0]*2)+2];
     int sums2[(n[1]*2)+2];
     int sums3[(n[2]*2)+2];
-    for(i<=0 ; (i<(n[0]*2)+2) ; i++)
+    for(i=0 ; i<(n[0]*2)+2 ; i++)
     {
         sums1[i]=0;
     }
-    for(i<=0 ; (i<(n[1]*2)+2) ; i++)
+    for(i=0 ; i<(n[1]*2)+2 ; i++)
     {
         sums2[i]=0;
     }
-    for(i<=0 ; (i<(n[2]*2)+2) ; i++)
+    for(i=0 ; i<(n[2]*2)+2 ; i++)
     {
         sums3[i]=0;
     }
@@ -127,19 +127,37 @@ void main()
         {
                 if(k==0)
                 {
-                    sums1[j+(n[0]*2)]=sums1[j+(n[0]*2)]+first[i][j];
+                    sums1[(n[0]*2)]=sums1[(n[0]*2)]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    sums2[j+(n[1]*2)]=sums2[j+(n[1]*2)]+sec[i][j];
+                    sums2[(n[1]*2)]=sums2[(n[1]*2)]+sec[i][j];
                 }
                 else
                 {
-                    sums3[j+(n[2]*2)]=sums3[j+(n[2]*2)]+third[i][j];
+                    sums3[(n[2]*2)]=sums3[(n[2]*2)]+third[i][j];
                 }
         }
     }
 
+    for(k=0; k<3 ;k++)
+    {
+        for(j=0,i=0; j<3 ;j++,i++)
+        {
+                if(k==0)
+                {
+                    sums1[(n[0]*2)+1]=sums1[(n[0]*2)+1]+first[i][j];
+                }
+                else if(k==1)
+                {
+                    sums2[(n[1]*2)+1]=sums2[(n[1]*2)+1]+sec[i][j];
+                }
+                else
+                {
+                    sums3[(n[2]*2)+1]=sums3[(n[2]*2)+1]+third[i][j];
+                }
+        }
+    }
 
     printf("check SUM\n");
     for(k=0; k<3 ;k++)
@@ -162,6 +180,8 @@ void main()
         printf("\n");
 
     }
+
+
 
 
 }
