@@ -22,24 +22,24 @@ void main()
     max=looblike[0];
     for(i=0 ; i<10000 ; i++)
     {
-        if(looblike[i]>max)
+        if(looblike[i]>max && i!=0)
         {
             for(j=0 ; j<maxcount ; j++)
                 maxsave[j]=0;
             max=looblike[i];
             maxcount=1;
-            maxsave[maxcount-1]=looblike[i];
+            maxsave[maxcount-1]=i;
         }
         else if(looblike[i]==max)
         {
             maxcount++;
-            maxsave[maxcount-1]=looblike[i];
+            maxsave[maxcount-1]=i;
         }
     }
 
     for(j=0 ; j<maxcount ; j++)
     {
-        printf("%lli ",maxsave[j]);
+        printf("%lli ",maxsave[j]+1);
     }
 
 }
