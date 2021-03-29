@@ -33,6 +33,31 @@ void main()
         }
         printf("\n");
     }
+/*                 For Check  Num
+    printf("check Num\n");
+    for(k=0; k<3 ;k++)
+    {
+        for(i=0; i<n[k] ;i++)
+        {
+            for(j=0; j<n[k] ;j++)
+            {
+                if(k==0)
+                {
+                    printf("%d ",first[i][j]);
+                }
+                else if(k==1)
+                {
+                    printf("%d",sec[i][j]);
+                }
+                else
+                {
+                    printf("%d",third[i][j]);
+                }
+            }
+        }
+        printf("\n");
+    }
+*/
     /////////////////////////////////////////////////////////////////////////////
 
 
