@@ -8,6 +8,10 @@ void main()
     n=get[0];
     c=get[1];
 
+
+
+
+/////////////////////////////////////Ver 2.0//////////////////////////////////
     long long int nsave=n,csave=c,nuse=n,cuse=c,ntemp=1,ctemp=1,countn=0,countc=0;
     while(nuse)
     {
@@ -73,6 +77,7 @@ void main()
         }
 
     }
+/////////////////////////////////////Ver 2.0//////////////////////////////////
 
 
 
@@ -81,35 +86,38 @@ void main()
 
 
 
-
-    if(check)
+    if(check)   ////////Ver 1.0
     {
-    mul=1;
-    while(mul<=c)
-    {
-        mul=mul*10;
-        //printf("mul = %lli\n",mul);
-    }
-    k=n;
-    while(1)
-    {
-        k++;
-        if(k%mul==c)
+        mul=1;
+        while(mul<=c)
         {
-            //printf("k=%lli\n",k);
-            break;
+            mul=mul*10;
+            //printf("mul = %lli\n",mul);
         }
-        else
+        k=n;
+        while(1)
         {
-            //printf("At Con k=%lli\n",k);
-            continue;
+            k++;
+            if(k%mul==c)
+            {
+                //printf("k=%lli\n",k);
+                break;
+            }
+            else
+            {
+                //printf("At Con k=%lli\n",k);
+                continue;
+            }
+
+
         }
-
-
-    }
-    printf("%lli",k);
+        printf("%lli",k);
     }
     else
+    {
+        k=n;
         printf("%lli",n+1);
+    }
+
 
 }
