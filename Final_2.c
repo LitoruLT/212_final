@@ -16,6 +16,7 @@ void main()
     for(j=0 ; j<10000 ; j++)
         maxsave[j]=0;
 
+    max=looblike[0];
     for(i=0 ; i<10000 ; i++)
     {
         if(looblike[i]>max)
