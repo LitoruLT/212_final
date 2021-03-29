@@ -8,4 +8,6 @@ void main()
         scanf("%d",&n[i]);
     }
     printf("\n");
+
+    int first[n[0]],sec[n[1]],third[n[3]]
 }
