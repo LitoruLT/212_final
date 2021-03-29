@@ -12,7 +12,7 @@ void main()
         looblike[get-1]++;
     }
 
-    long long int max,maxsave[10000],maxcount=0;
+    long long int max,maxsave[10000],maxcount=1;
     for(j=0 ; j<10000 ; j++)
         maxsave[j]=0;
 
@@ -24,14 +24,19 @@ void main()
             for(j=0 ; j<maxcount ; j++)
                 maxsave[j]=0;
             max=looblike[i]
-            maxcount=0
+            maxcount=1
             maxsave[maxcount]=looblike[i]
         }
         else if(looblike[i]==max)
         {
             maxcount++;
+            maxsave[maxcount]=looblike[i]
         }
     }
 
+    for(j=0 ; j<maxcount ; j++)
+    {
+        printf("%d ",maxsave[j]);
+    }
 
 }
