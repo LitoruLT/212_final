@@ -22,7 +22,7 @@ void main()
     max=looblike[0];
     for(i=0 ; i<10000 ; i++)
     {
-        if(looblike[i]>max && i!=0)
+        if(looblike[i]>max)
         {
             for(j=0 ; j<maxcount ; j++)
                 maxsave[j]=0;
@@ -30,7 +30,7 @@ void main()
             maxcount=1;
             maxsave[maxcount-1]=i;
         }
-        else if(looblike[i]==max)
+        else if(looblike[i]==max && i!=0)
         {
             maxcount++;
             maxsave[maxcount-1]=i;
