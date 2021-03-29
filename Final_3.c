@@ -99,6 +99,7 @@ void main()
             }
         }
     }
+
     for(k=0; k<3 ;k++)
     {
         for(j=0; j<n[k] ;j++)
@@ -142,7 +143,7 @@ void main()
 
     for(k=0; k<3 ;k++)
     {
-        for(j=n[k],i=n[k]; j>=0 ;j++,i++)
+        for(j=n[k]-1,i=n[k]-1; j>=0 ;j=j-1,i=i-1)
         {
                 if(k==0)
                 {
@@ -158,7 +159,7 @@ void main()
                 }
         }
     }
-
+/*
     printf("check SUM\n");
     for(k=0; k<3 ;k++)
     {
@@ -180,15 +181,15 @@ void main()
         printf("\n");
 
     }
-
+*/
     int check=0,for2;
     for(k=0; k<3 ;k++)
     {
         check=0;
         if(n[k]==2)
-            for2=0
+            for2=0;
         else
-            for2=2
+            for2=2;
         for(i=0 ; i<(n[k]*2)+for2 ; i++)
         {
            if(k==0 && i>0)
