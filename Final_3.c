@@ -181,7 +181,44 @@ void main()
 
     }
 
+    int check=0;
+    for(k=0; k<3 ;k++)
+    {
+        check=0;
+        for(i=0 ; i<(n[k]*2)+2 ; i++)
+        {
+           if(k==0 && i>0)
+            {
+                if( sums1[i]!=sums1[i-1] )
+                {
+                    check=1;
+                    break;
+                }
+            }
+            else if(k==1 && i>0)
+            {
+                if( sums2[i]!=sums2[i-1] )
+                {
+                    check=1;
+                    break;
+                }
+            }
+            else if(k==2 && i>0)
+            {
+                if( sums3[i]!=sums3[i-1] )
+                {
+                    check=1;
+                    break;
+                }
+            }
+        }
+        if(check==1)
+            printf("yes\n");
+        else
+            printf("no\n");
+        printf("\n");
 
+    }
 
 
 }
