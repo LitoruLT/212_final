@@ -3,7 +3,7 @@
 void main()
 {
     int n[3],i,j,k;
-    for(i=0; i<n ;i++)
+    for(i=0; i<3 ;i++)
     {
         scanf("%d",&n[i]);
     }
@@ -61,20 +61,41 @@ void main()
             {
                 if(k==0)
                 {
-                    sums=sums+first[i][j];
+                    sums1[i]=sums1[i]+first[i][j];
                 }
                 else if(k==1)
                 {
-                    scanf("%d",&sec[i][j]);
+                    sums2[i]=sums2[i]+sec[i][j];
                 }
                 else
                 {
-                    scanf("%d",&third[i][j]);
+                    sums3[i]=sums3[i]+third[i][j];
                 }
             }
         }
-        printf("\n");
     }
+    for(k=0; k<3 ;k++)
+    {
+        for(j=0; j<n[k] ;j++)
+        {
+            for(i=0; i<n[k] ;i++)
+            {
+                if(k==0)
+                {
+                    sums1[j+3]=sums1[j+3]+first[i][j];
+                }
+                else if(k==1)
+                {
+                    sums2[j+3]=sums2[j+3]+sec[i][j];
+                }
+                else
+                {
+                    sums3[j+3]=sums3[j+3]+third[i][j];
+                }
+            }
+        }
+    }
+
 
 
 }
