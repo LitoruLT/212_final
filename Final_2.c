@@ -6,6 +6,9 @@ void main()
     scanf("%lli",&n);
     long long int looblike[10000];
 
+    for(j=0 ; j<10000 ; j++)
+        looblike[j]=0;
+
     for(i=0 ; i<n ; i++)
     {
         scanf("%lli",&get);
@@ -25,12 +28,12 @@ void main()
                 maxsave[j]=0;
             max=looblike[i];
             maxcount=1;
-            maxsave[maxcount]=looblike[i];
+            maxsave[maxcount-1]=looblike[i];
         }
         else if(looblike[i]==max)
         {
             maxcount++;
-            maxsave[maxcount]=looblike[i];
+            maxsave[maxcount-1]=looblike[i];
         }
     }
 
